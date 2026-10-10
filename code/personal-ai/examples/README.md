@@ -1,10 +1,10 @@
-# Personal AI · 실제 Codex Runner 보조 함수 발췌
+# Codex Runner 보조 함수
 
 [전체 AI 개발 경험](../../../projects/agentic-development.md) · [실사용·합성 테스트 구분](../README.md)
 
-이 폴더에는 비공개 개인 저장소의 **실제 PowerShell 소스 파일**에서, 개인 정보와 무인 실행·Provider 쓰기 로직을 제외한 *작은 함수 다섯 개*를 보존했습니다. Codex 등 AI 지원 구현의 기록으로, 사람이 이를 모두 수동 작성했다는 뜻은 아닙니다.
+개인 저장소의 PowerShell 소스에서 함수 다섯 개를 발췌했습니다. 개인 정보와 무인 실행·Provider 쓰기 로직은 제외했습니다. 원본 구현에는 Codex 등 AI의 도움을 받았습니다.
 
-| 파일 | 무엇을 검증할 수 있는가 |
+| 파일 | 내용 |
 |---|---|
 | [verified-cli-helpers.ps1](verified-cli-helpers.ps1) | 외부 프로그램 exit code 판독, 작업 지시 헤더·TASK·DONE_WHEN 읽기, 허용된 저장소 경로만 찾기 |
 | [test-verified-cli-helpers.ps1](test-verified-cli-helpers.ps1) | 실제 제공된 함수로 외부 API 없이 **12개 조건** 검사 |
@@ -17,7 +17,7 @@ Windows PowerShell 5.1 이상에서 폴더 안에서 실행합니다.
 powershell -NoProfile -ExecutionPolicy Bypass -File .\test-verified-cli-helpers.ps1
 ~~~
 
-코드의 `Get-RepoPath`는 Config의 `Repositories`에 없는 이름에 `$null`을 반환합니다. 호출자가 이 반환값을 검사해 실행을 중단해야 합니다. 이 함수만으로 Issue 전체를 승인하거나 작업 실행을 허용하지 않습니다.
+코드의 `Get-RepoPath`는 Config의 `Repositories`에 없는 이름에 `$null`을 반환합니다. 호출자가 이 반환값을 검사해 실행을 중단해야 합니다. 작업 승인은 호출하는 Runner에서 처리합니다.
 
 ## 작업 지시가 함수들을 통과하는 과정
 
@@ -32,15 +32,15 @@ DONE_WHEN:
 - A real file check is reported.
 ```
 
-| 함수 | 이 입력에서 하는 일 | 여기서 보장하지 않는 것 |
-|---|---|---|
-| `Get-HeaderValue` | 행 시작의 `TARGET_REPO`, `BASE_BRANCH` 값을 찾음. 없는 헤더는 `$null` | 중복 헤더 검출·사용자 승인 |
-| `Get-TaskSection` | `TASK:`에서 `DONE_WHEN:` 전까지의 작업 본문 추출 | 본문 안의 지시가 안전하거나 승인됐다는 판단 |
-| `Get-DoneWhenSection` | `DONE_WHEN:` 이후의 완료 조건 추출. 없으면 빈 문자열 | 완료 조건이 실제로 달성됐다는 판정 |
-| `Get-RepoPath` | 지정한 이름을 허용 목록에서 조회 | 경로가 실제 존재하는지·Git 원격이 맞는지 |
-| `Invoke-ExternalText` | 명령과 인자를 분리해 실행하고 native exit code 검사 | 외부 서비스에 결과가 반영됐다는 확인 |
+| 함수 | 처리 내용 |
+|---|---|
+| `Get-HeaderValue` | 행 시작의 `TARGET_REPO`, `BASE_BRANCH` 값을 찾음. 없는 헤더는 `$null` |
+| `Get-TaskSection` | `TASK:`에서 `DONE_WHEN:` 전까지의 작업 본문 추출 |
+| `Get-DoneWhenSection` | `DONE_WHEN:` 이후의 완료 조건 추출. 없으면 빈 문자열 |
+| `Get-RepoPath` | 지정한 이름을 허용 목록에서 조회 |
+| `Invoke-ExternalText` | 명령과 인자를 분리해 실행하고 native exit code 검사 |
 
-파서들은 문자열을 추출하며 Task 본문을 코드로 실행하지 않습니다. 허용 목록 조회도 경로 문자열을 반환할 뿐입니다. 실제 Runner의 승인·격리·원본 재조회는 별도 단계였으므로, 이 다섯 함수를 전체 자동화로 소개하지 않습니다.
+파서는 문자열을 추출하고 허용 목록 조회는 경로 문자열을 반환합니다. Task 본문의 실행과 Runner의 승인·격리·원본 재조회는 별도 단계이며, 이 발췌에 포함되지 않습니다.
 
 ## Windows CLI에서 겪은 오류와 확인 방법
 
@@ -55,10 +55,10 @@ Windows PowerShell 5.1에서는 외부 프로그램이 stderr로 진행 상황�
 
 이 검사는 로컬 Windows PowerShell 프로세스만 실행하며 GitHub·메일·MCP를 호출하지 않습니다.
 
-## 원본·기여·재사용 범위
+## 원본과 Runner 구조
 
 - 원문은 개인 **비공개** `scripts/pai-codex-runner.ps1`; 이 발췌의 소스 blob SHA는 파일 머리에 남겼습니다.
 - 실제 당시 설계는 GitHub Issue 작업 계약 → 승인된 repo allowlist → 분리된 worktree → Codex CLI → 테스트 → Draft PR 및 provider readback입니다. 당시 Runner 설계이며 지속 운영과 무인 복구는 검증되지 않았습니다.
-- 실제로 원본이 있고 실행 가능한 몇 개 함수를 공개하는 것이 목적이며, API·메일·학생 데이터·팀 코드는 들어 있지 않습니다.
+- 발췌에는 API·메일·학생 데이터·팀 코드가 없습니다.
 
 [실제 Runner 및 Skill 실험의 출처/범위](../CLI_AND_SKILLS_EVIDENCE.md)

@@ -1,8 +1,8 @@
-# Academic Loop · 실제 개발 패키지
+# Academic Loop
 
 [Personal AI](../../../projects/personal-ai.md) · [공개 파일 안내](../README.md)
 
-공부와 자료 처리의 사용 방식에 맞춰 개발한 Academic Loop 0.1.3입니다. 개발 원본의 패키지 파일 14개와 검사·검토 자료 2개를 변경 없이 복사했습니다. 이 README와 [파일 해시 목록](SOURCE_MANIFEST.json)은 공개 안내를 위해 추가했습니다. 개인 학습 데이터와 계정 설정은 포함하지 않습니다.
+수업 준비와 공부, 과제·시험에 사용하는 절차를 정리한 Academic Loop 0.1.3입니다. 개발 원본의 패키지 파일 14개와 검사·검토 자료 2개를 그대로 가져왔습니다. 이 README와 [파일 해시 목록](SOURCE_MANIFEST.json)을 추가했으며, 개인 학습 데이터와 계정 설정은 제외했습니다.
 
 ## 구조
 
@@ -17,7 +17,7 @@ references/                       공통 운영·연속 학습·자료 범위·�
 tests/                            구조 검사와 행동 검토 사례
 ```
 
-각 Skill의 `SKILL.md`가 적용 조건과 절차를 담고, `agents/openai.yaml`이 표시·호출 메타데이터를 담습니다. 긴 공통 규칙은 참조 파일로 나눴습니다. 이 패키지 자체가 MCP 연결·권한·서버를 제공하지는 않습니다.
+`SKILL.md`에는 적용 조건과 절차를, `agents/openai.yaml`에는 표시·호출 메타데이터를 담았습니다. 공통 규칙은 참조 파일에 모았습니다. MCP 연결과 권한·서버는 별도로 준비해야 합니다.
 
 ## 네 가지 Skill
 
@@ -38,6 +38,6 @@ tests/                            구조 검사와 행동 검토 사례
 python code/personal-ai/academic-loop/tests/check_contract.py code/personal-ai/academic-loop
 ```
 
-네 Skill의 구조·참조 경로·완료 기준과 민감 파일 포함 여부를 검사합니다. [행동 검토 사례](tests/source-coverage-cases.md)는 자료 누락·동명 파일·부분 열람 등에서 어떤 판단을 해야 하는지 설명합니다. 구조 통과는 실제 도구 호출·수업 전체 처리·학습 효과의 증거가 아닙니다.
+네 Skill의 구조·참조 경로·완료 기준과 민감 파일 포함 여부를 검사합니다. [행동 검토 사례](tests/source-coverage-cases.md)는 자료 누락·동명 파일·부분 열람에 대한 처리 기준입니다. 이 검사는 도구 호출이나 수업 처리를 실행하지 않습니다.
 
-당시 실제 Wiki 조회와 0.1.1 설치 검사는 [별도 실행 발췌](../../../evidence/personal-ai/academic-reuse.json)에 있습니다. 공개 사본 0.1.3의 구조 검사와 이전 버전의 설치 기록을 구분합니다.
+[실행 발췌](../../../evidence/personal-ai/academic-reuse.json)에는 당시 Wiki 조회와 0.1.1 설치 검사를 담았습니다. 현재 공개 사본은 0.1.3이며 설치 기록과 버전이 다릅니다.
