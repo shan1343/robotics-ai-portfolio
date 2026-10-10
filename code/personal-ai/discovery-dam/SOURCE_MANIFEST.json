@@ -1,0 +1,15 @@
+{
+  "source": "Discovery Dam 0.1.2 development package",
+  "scope": "deterministic candidate handling only",
+  "copied_unchanged": true,
+  "source_files": [
+    {
+      "file": "dam.py",
+      "sha256": "a77ff8f35870e88e06be7c0b4b3462ef2dc96d99fc17bf997ee1df4d8c44091d"
+    },
+    {
+      "file": "test_dam.py",
+      "sha256": "3c7f476df693c1edf8a3e970792fd607e2196a9a58099721b5a873e319644817"
+    }
+  ]
+}

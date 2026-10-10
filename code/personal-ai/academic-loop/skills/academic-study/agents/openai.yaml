@@ -1,0 +1,4 @@
+interface:
+  display_name: "복습과 공부"
+  short_description: "현재 강의 자료와 실제 답변을 바탕으로 복습과 전이 연습을 진행합니다"
+  default_prompt: "Use $academic-study to start the current course review."

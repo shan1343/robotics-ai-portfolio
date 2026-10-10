@@ -1,31 +1,27 @@
-# Agent evidence validator
-[프로젝트 설명](../../projects/personal-ai.md) · [첫 화면](../../README.md)
+# Personal AI · 공개한 실제 파일
 
-Personal AI 개발 기록에서 추출한 JavaScript 검사 모듈입니다. 원본의 판정 로직과 CLI를 유지하고, 개인정보 없는 합성 GitHub 입력 예제만 포함했습니다. AI 지원 개발 산출물이며 요구 정의·결과 통합·사용 평가에 참여했습니다.
+[개발·사용 경험](../../projects/personal-ai.md) · [Codex 개발 과정](../../projects/agentic-development.md)
 
-## 확인할 코드
-- [판정 모듈](src/lived-canary-evidence.js)
-- [CLI](scripts/validate-lived-canary-evidence.mjs)
-- [합성 예제](fixtures/github-pass.synthetic.json)
-- [Codex CLI·Skill 실험의 근거와 검증 한계](CLI_AND_SKILLS_EVIDENCE.md) · [개발 사례](../../projects/agentic-development.md)
+이 폴더에는 실제 개인 개발 원본에서 선별한 Skill 패키지와 실행 코드를 담았습니다. 개인 일정·계정 설정·학생 자료·외부 서비스 쓰기 경로는 제외했습니다.
 
-## 실행
-Node.js의 ES module을 사용하며 외부 패키지 설치가 필요하지 않습니다.
+| 위치 | 내용 |
+|---|---|
+| [academic-loop/](academic-loop/README.md) | 0.1.3 원본의 네 Skill, 공통 참조, 플러그인과 agent 설정 |
+| [discovery-dam/](discovery-dam/README.md) | 조사 플러그인의 실제 후보 정리 코드와 기존 테스트 |
+| [examples/](examples/README.md) | 실제 Codex Runner의 PowerShell 함수 다섯 개와 로컬 검사 |
+| [src/lived-canary-evidence.js](src/lived-canary-evidence.js) | 합성 결과 보고서의 조건·부작용·보고값 판정 |
+| [scripts/validate-lived-canary-evidence.mjs](scripts/validate-lived-canary-evidence.mjs) | JSON 입력을 검사하는 CLI |
+| [fixtures/](fixtures/github-pass.synthetic.json) | 공개 실행용 합성 입력 |
+| [CLI_AND_SKILLS_EVIDENCE.md](CLI_AND_SKILLS_EVIDENCE.md) | 원본 파일·시점·확인 범위 |
+
+## 판정기 실행
+
+이 폴더에서 실행합니다. 추가 npm 패키지는 필요하지 않습니다.
 
 ```sh
-cd code/personal-ai
 npm run validate
 ```
 
-예상 결과는 schemaValid=true, verdict=PASS입니다. 합성 예제의 crossScopeSideEffects를 1로 바꾸고 outcome을 FAIL로 바꾸면 METRIC_crossScopeSideEffects로 실패 판정하도록 구현되어 있습니다.
+정상 합성 입력은 `schemaValid: true`, `verdict: PASS`를 출력합니다. 종료 코드는 PASS 0, 구조 오류 1, 유효하지만 PASS가 아닌 결과 2입니다. 실제 Provider에 접속하거나 입력 내용의 진실성을 외부에서 확인하는 기능은 없습니다. `LIVED_SANITIZED`로 표시한 입력은 이 공개 버전에서 `INVALID`로 거절합니다.
 
-이번 편집에서 CLI를 실제 재실행해 schemaValid=true, verdict=PASS를 확인했습니다. [7개 조건의 회귀 검사](../../scripts/check-evidence.mjs)와 [실제 출력](../../evidence/personal-ai/local-regression.json)도 제공합니다. 합성 입력 검사이며 외부 provider에는 접속하지 않았습니다.
-
-## 실제 PowerShell 코드 발췌
-
-[원본 함수 5개와 재현 테스트](examples/README.md)에는 Codex 작업 지시 파싱, 허용된 저장소 검사, 외부 프로세스 종료 코드 판정이 담겨 있습니다. Private Runner 소스에서 부작용 없는 부분만 공개한 것이며 스케줄러나 외부 쓰기 기능은 복사하지 않았습니다.
-
-## 범위
-정확한 필드 집합·assertion 순서·가상 fixture 기준값·부작용 지표를 검사합니다. 공개 버전에서는 실제 provider 근거가 없는 `LIVED_SANITIZED` 입력을 거부해 합성 결과를 실사용 성공으로 승격하지 않습니다. PASS 보고서를 그대로 믿는 대신 계산한 판정과 보고 outcome의 일치를 요구합니다.
-
-실제 provider에 접속하지 않습니다. 제출된 report가 진실인지 확인하는 수집·재조회 계층은 별도이며, 이 코드만으로 에이전트의 작업 완료가 입증되는 것은 아닙니다. 포함된 참조 문자열은 개인정보와 내부 Git SHA를 제거한 **가상 fixture 값**이며 실제 과거 Git revision이 아닙니다.
+저장소 루트의 [회귀 검사](../../scripts/check-evidence.mjs)는 정상 입력, 부작용, 거짓 PASS, 실사용 위장, 필수 조건 누락과 기준 변조를 확인합니다. [검사 기록](../../evidence/personal-ai/local-regression.json)의 수치는 로컬 합성 시험입니다.

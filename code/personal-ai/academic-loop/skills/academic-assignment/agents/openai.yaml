@@ -1,0 +1,4 @@
+interface:
+  display_name: "과제 지원"
+  short_description: "공식 과제 조건에 따라 학습을 돕고 실제 편집 가능한 결과물을 검증합니다"
+  default_prompt: "Use $academic-assignment to continue the current coursework task."

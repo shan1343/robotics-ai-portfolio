@@ -1,0 +1,71 @@
+{
+  "source": "Academic Loop development package",
+  "version": "0.1.3",
+  "copied_unchanged": true,
+  "source_files": [
+    {
+      "file": ".codex-plugin/plugin.json",
+      "sha256": "368f7ade55469061e93351bffca81fb694a4016f44fbc1fab6024c9acd068be3"
+    },
+    {
+      "file": "skills/academic-assignment/agents/openai.yaml",
+      "sha256": "652fc18928db81d8bd82f432ead86fd54ce57594eb39cd07b59efe868f417110"
+    },
+    {
+      "file": "skills/academic-assignment/SKILL.md",
+      "sha256": "06df7887f0007fdc69f450b7c2b1a56a9efe6c35429d6a1e011834000b98022a"
+    },
+    {
+      "file": "skills/academic-class-operator/agents/openai.yaml",
+      "sha256": "5c5582e5589f983d05aea82a865ce49ef7c9a6534d708987b5579ed6de1e7a48"
+    },
+    {
+      "file": "skills/academic-class-operator/SKILL.md",
+      "sha256": "841d3893e2eefd0ed176f4644b61262c7c2d10170085eaafa494c0e038d32e3f"
+    },
+    {
+      "file": "skills/academic-exam/agents/openai.yaml",
+      "sha256": "6fa7a2debb3d24d2f52803add183ef679419b8177c36750af13d8782ed80b296"
+    },
+    {
+      "file": "skills/academic-exam/SKILL.md",
+      "sha256": "a25fbb5b557dc5d236265aed42ecda962c40066d247c5df51b437348efa42041"
+    },
+    {
+      "file": "skills/academic-study/agents/openai.yaml",
+      "sha256": "d3a08a878e3de4266e9d3a8d596f3b94940159fb7022b3f02cff8e32b59689c6"
+    },
+    {
+      "file": "skills/academic-study/SKILL.md",
+      "sha256": "d523e8c87a04a3e820f17e3eb4e58edcc9ed8dc1bf7ac2871c717693d5873344"
+    },
+    {
+      "file": "references/learning-and-continuity.md",
+      "sha256": "730717de6755736e2fe4eb1a8d46c30c53394410cddc49f3de67ac08e65f534e"
+    },
+    {
+      "file": "references/maintenance.md",
+      "sha256": "2dda05188b321d0e69fb7d42928a0d71b26e13e4c0816587bf2b14dee48fb5d7"
+    },
+    {
+      "file": "references/operating-contract.md",
+      "sha256": "a0b078b596b362fe3b3f86b181d20e15b967275f179c1453a2d348e1bfa425e2"
+    },
+    {
+      "file": "references/recorded-workflows.md",
+      "sha256": "f6a7916bbd0ab4a24003e9bebd82437536a6efcd08f0e48864aac1189ca03877"
+    },
+    {
+      "file": "references/source-coverage.md",
+      "sha256": "35a32d7366ba698059610ba1913c56cc8740d79eb867ce62b6a4bb71e955a6ff"
+    },
+    {
+      "file": "tests/check_contract.py",
+      "sha256": "6bf97a09beaca7d4fcf1f41579a6eed3edacba23fc6b4c94ffc1f52aa5698398"
+    },
+    {
+      "file": "tests/source-coverage-cases.md",
+      "sha256": "041f8860ab21656fee50279fd22cea19d872177f08f7af934c646cd77607ca02"
+    }
+  ]
+}

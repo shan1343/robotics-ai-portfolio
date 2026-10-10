@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-10-04",
+  "kind": "SANITIZED_HISTORICAL_RETRIEVAL_AND_INSTALLATION",
+  "retrieval": {
+    "case": 5,
+    "source_type": "existing personal Wiki",
+    "source_article": "academic-learning-triggers.md",
+    "operation": "read-only",
+    "verified_content": [
+      "푸리에 계수 계산 전 구간·주기와 짝홀성 확인",
+      "계수 적분 하나를 직접 계산하거나 직교성으로 공식 점검"
+    ],
+    "performed": [
+      "existing Wiki identity and article lookup",
+      "reuse of existing learning notes in response"
+    ],
+    "not_performed": [
+      "new Wiki creation",
+      "reindexing",
+      "provider write"
+    ],
+    "limitation": "One local configuration file was inaccessible; the existing index and article were read."
+  },
+  "installation_record": {
+    "version": "0.1.1",
+    "source_and_installed_files_compared": 15,
+    "all_files_match": true,
+    "structural_checks_passed": 12,
+    "structural_checks_total": 12
+  },
+  "other_cases": {
+    "cases_1_to_4": "synthetic scenarios",
+    "notebooklm": "not run"
+  },
+  "not_claimed": [
+    "whole-course processing",
+    "cross-surface synchronization",
+    "learning improvement",
+    "autonomous operation"
+  ]
+}
