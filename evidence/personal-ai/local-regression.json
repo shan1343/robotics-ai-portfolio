@@ -1,0 +1,105 @@
+{
+  "kind": "LOCAL_SYNTHETIC_REGRESSION",
+  "providerCalls": 0,
+  "tests": 7,
+  "passed": 7,
+  "cases": [
+    {
+      "name": "합성 입력의 일관성",
+      "expected": "PASS",
+      "schemaValid": true,
+      "verdict": "PASS",
+      "errors": [],
+      "gateFailures": [],
+      "check": "PASS"
+    },
+    {
+      "name": "다른 대상에 부작용 발생",
+      "expected": "FAIL",
+      "schemaValid": true,
+      "verdict": "FAIL",
+      "errors": [],
+      "gateFailures": [
+        "METRIC_crossScopeSideEffects"
+      ],
+      "check": "PASS"
+    },
+    {
+      "name": "부작용을 숨기고 PASS 보고",
+      "expected": "INVALID",
+      "schemaValid": false,
+      "verdict": "INVALID",
+      "errors": [
+        "outcome does not match the computed verdict."
+      ],
+      "gateFailures": [
+        "METRIC_crossScopeSideEffects"
+      ],
+      "check": "PASS"
+    },
+    {
+      "name": "합성 검사를 실사용 결과로 승격",
+      "expected": "INVALID",
+      "schemaValid": false,
+      "verdict": "INVALID",
+      "errors": [
+        "lifecycleState does not match evidenceClass."
+      ],
+      "gateFailures": [],
+      "check": "PASS"
+    },
+    {
+      "name": "합성 입력의 두 상태를 바꿔 실사용처럼 위장",
+      "expected": "INVALID",
+      "schemaValid": false,
+      "verdict": "INVALID",
+      "errors": [
+        "Public synthetic fixture validator has no trusted provider readback; lived result cannot be certified."
+      ],
+      "gateFailures": [],
+      "check": "PASS"
+    },
+    {
+      "name": "필수 재조회 검사 누락",
+      "expected": "INVALID",
+      "schemaValid": false,
+      "verdict": "INVALID",
+      "errors": [
+        "assertions must contain the exact canary assertion set."
+      ],
+      "gateFailures": [
+        "GH-PRE-01",
+        "GH-PERM-01",
+        "GH-BIND-A-01",
+        "GH-BIND-B-01",
+        "GH-UI-01",
+        "GH-DRY-01",
+        "GH-WRITE-01",
+        "GH-REFETCH-01",
+        "GH-NEG-A-UNSELECTED-READ",
+        "GH-NEG-A-UNSELECTED-WRITE",
+        "GH-NEG-A-B-READ",
+        "GH-NEG-A-B-WRITE",
+        "GH-NEG-CLAIMS-01",
+        "GH-CONCURRENCY-01",
+        "GH-RENAME-01",
+        "GH-REVOKE-01",
+        "GH-EXPIRY-01",
+        "GH-SECRET-SCAN-01",
+        "GH-CLEANUP-01"
+      ],
+      "check": "PASS"
+    },
+    {
+      "name": "검토 기준 revision 변경",
+      "expected": "INVALID",
+      "schemaValid": false,
+      "verdict": "INVALID",
+      "errors": [
+        "preparedAgainst.sharedMain does not match the selected fixture reference."
+      ],
+      "gateFailures": [],
+      "check": "PASS"
+    }
+  ]
+}

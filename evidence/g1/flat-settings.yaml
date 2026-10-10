@@ -1,0 +1,12 @@
+# Selected fields from saved G1 Flat environment configuration.
+# Run: g1_flat/2026-04-03_10-50-30
+# Documentation excerpt, not a standalone Isaac Lab configuration.
+seed: 42
+decimation: 4
+sim:
+  dt: 0.005
+scene:
+  num_envs: 8192
+episode_length_s: 20.0
+# Joint-position action scale in source configuration:
+joint_position_action_scale: 0.5

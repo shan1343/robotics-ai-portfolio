@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "lived-beta-canary-evidence/v1",
+  "canary": "github-private-repo",
+  "runId": "canary-20260911-github-901",
+  "evidenceClass": "SYNTHETIC_FIXTURE",
+  "lifecycleState": "REHEARSAL_ONLY",
+  "preparedAgainst": {
+    "sharedMain": "fixture-reference-1",
+    "authBoundary": "fixture-reference-2",
+    "schemaMigration": "fixture-reference-3",
+    "uiVerification": "fixture-reference-4",
+    "providerReadback": "fixture-reference-5",
+    "sideEffectReview": "fixture-reference-6",
+    "configurationLimit": "fixture-reference-7"
+  },
+  "outcome": "PASS",
+  "assertions": [
+    { "id": "GH-PRE-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-PERM-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-BIND-A-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-BIND-B-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-UI-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-DRY-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-WRITE-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-REFETCH-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-NEG-A-UNSELECTED-READ", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-NEG-A-UNSELECTED-WRITE", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-NEG-A-B-READ", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-NEG-A-B-WRITE", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-NEG-CLAIMS-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-CONCURRENCY-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-RENAME-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-REVOKE-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-EXPIRY-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-SECRET-SCAN-01", "result": "PASS", "reasonCode": "NONE" },
+    { "id": "GH-CLEANUP-01", "result": "PASS", "reasonCode": "NONE" }
+  ],
+  "metrics": {
+    "markerWriteAttempts": 1,
+    "markerWritesObserved": 1,
+    "crossScopeSideEffects": 0,
+    "sameTargetRemintsObserved": 1,
+    "unexpectedTargetsObserved": 0,
+    "secretMatches": 0
+  }
+}

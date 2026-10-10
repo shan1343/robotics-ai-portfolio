@@ -1,0 +1,8 @@
+{
+  "name": "portfolio-agent-evidence",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-lived-canary-evidence.mjs fixtures/github-pass.synthetic.json"
+  }
+}
