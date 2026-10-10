@@ -49,11 +49,11 @@ SHAPE 교육을 위해 SO-101 두 세트와 모터 24개를 조립·점검했습
 
 | 폴더 | 확인할 수 있는 내용 |
 |---|---|
-| [`projects/`](projects/) | 경험별 역할, 기술 구조, 시행착오와 결과 |
-| [`code/personal-ai/`](code/personal-ai/) | 실제 Skill 패키지, 조사 후보 정리 코드, PowerShell 원본 함수와 JS 판정기 |
-| [`code/robotics/`](code/robotics/) | Humanoid 환경·인터페이스·IK·TF 작업의 기술 설명 |
-| [`evidence/`](evidence/) | G1 설정 발췌, 개인정보를 뺀 학업 기록 조회·검증 자료 |
-| [`scripts/`](scripts/) | 공개 예제의 회귀 검사와 문서 링크 검사 |
+| [`projects/`](https://github.com/shan1343/robotics-ai-portfolio/tree/main/projects) | 경험별 역할, 기술 구조, 시행착오와 결과 |
+| [`code/personal-ai/`](https://github.com/shan1343/robotics-ai-portfolio/tree/main/code/personal-ai) | 실제 Skill 패키지, 조사 후보 정리 코드, PowerShell 원본 함수와 JS 판정기 |
+| [`code/robotics/`](https://github.com/shan1343/robotics-ai-portfolio/tree/main/code/robotics) | Humanoid 환경·인터페이스·IK·TF 작업의 기술 설명 |
+| [`evidence/`](https://github.com/shan1343/robotics-ai-portfolio/tree/main/evidence) | G1 설정 발췌, 개인정보를 뺀 학업 기록 조회·검증 자료 |
+| [`scripts/`](https://github.com/shan1343/robotics-ai-portfolio/tree/main/scripts) | 공개 예제의 회귀 검사와 문서 링크 검사 |
 
 저장소 루트에서 실행합니다. 외부 계정이나 추가 패키지 설치가 필요하지 않습니다.
 

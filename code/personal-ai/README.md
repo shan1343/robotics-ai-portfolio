@@ -11,7 +11,7 @@
 | [examples/](examples/README.md) | 실제 Codex Runner의 PowerShell 함수 다섯 개와 로컬 검사 |
 | [src/lived-canary-evidence.js](src/lived-canary-evidence.js) | 합성 결과 보고서의 조건·부작용·보고값 판정 |
 | [scripts/validate-lived-canary-evidence.mjs](scripts/validate-lived-canary-evidence.mjs) | JSON 입력을 검사하는 CLI |
-| [fixtures/](fixtures/) | 공개 실행용 합성 입력 |
+| [fixtures/](https://github.com/shan1343/robotics-ai-portfolio/tree/main/code/personal-ai/fixtures) | 공개 실행용 합성 입력 |
 | [CLI_AND_SKILLS_EVIDENCE.md](CLI_AND_SKILLS_EVIDENCE.md) | 원본 파일·시점·확인 범위 |
 
 ## 판정기 실행
