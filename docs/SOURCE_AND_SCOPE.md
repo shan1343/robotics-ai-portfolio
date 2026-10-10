@@ -21,7 +21,7 @@
 - [PowerShell 원본 함수](../code/personal-ai/examples/README.md): 개인 Runner의 함수 다섯 개. 로컬 문자열·프로세스 동작 검사는 실제 서비스 실행과 별개입니다.
 - [JavaScript 판정기](../code/personal-ai/README.md): 합성 입력 7개를 검사하고 외부 호출은 하지 않습니다. 코드의 참조 문자열은 가상 fixture 표식입니다.
 - [학업 기록 재사용](../evidence/personal-ai/academic-reuse.json): 2026-10-04 실제 Wiki 조회와 당시 0.1.1 설치·구조 검사. NotebookLM 실행이나 학습 효과 시험은 포함하지 않습니다.
-- [G1 설정](../evidence/g1/flat-settings.yaml): 실행 조건 발췌이며 모델·checkpoint를 포함한 완전 재현 패키지가 아닙니다.
+- [G1 설정](../evidence/g1/flat-settings.yaml): 실행 조건 발췌. 모델·checkpoint 미포함.
 
 ## 공개하지 않는 자료
 
