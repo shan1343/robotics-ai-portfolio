@@ -7,6 +7,7 @@ Personal AI 개발 기록에서 추출한 JavaScript 검사 모듈입니다. 원
 - [판정 모듈](src/lived-canary-evidence.js)
 - [CLI](scripts/validate-lived-canary-evidence.mjs)
 - [합성 예제](fixtures/github-pass.synthetic.json)
+- [Codex CLI·Skill 실험의 근거와 검증 한계](CLI_AND_SKILLS_EVIDENCE.md) · [개발 사례](../../projects/agentic-development.md)
 
 ## 실행
 Node.js의 ES module을 사용하며 외부 패키지 설치가 필요하지 않습니다.

@@ -16,6 +16,10 @@
 | **[Humanoid Challenge · ROS 2 통합](projects/robotics-integration.md)** | MoveIt CollisionObject, 이미 닫힌 그리퍼의 attach 누락, TRAC-IK·TF 문제 | [환경·작업공간 시험 근거](code/robotics/ENVIRONMENT_AND_TEST_EVIDENCE.md) · [상태 처리 설명](code/robotics/README.md) |
 | **[Personal AI · AI와 함께 개발하는 학습](projects/personal-ai.md)** | 요구 정의, AI 지원 구현의 검증, 제한된 실제 업무 시험과 실패, 중단 판단 | [실제 JavaScript 판정기](code/personal-ai/src/lived-canary-evidence.js) · [CLI](code/personal-ai/scripts/validate-lived-canary-evidence.mjs) · [7개 합성 테스트](scripts/check-evidence.mjs) |
 
+### AI 코딩 도구를 쓰는 개발
+
+[Codex CLI·Skill·검증 사례](projects/agentic-development.md)에서 목표와 수정 범위 정의, 격리 실행, 원본 재조회, Skill 대조 실험과 복잡한 자동화 보류 판단을 설명합니다. [파일별 근거와 공개 코드](code/personal-ai/CLI_AND_SKILLS_EVIDENCE.md)는 확인된 결과와 미검증 상태를 구분합니다.
+
 ### G1 — 어떤 보상을 바꾸려 했는가?
 
 보존된 Rough 실습 설정의 수정 후보에는 아래 변화가 남아 있습니다. **파일에 기록된 값과 실제 학습에 적용된 값을 구별**합니다. 한 후보에서는 `__post_init__`가 클래스 밖에 정의돼 있어 적용 여부를 단정할 수 없습니다.
