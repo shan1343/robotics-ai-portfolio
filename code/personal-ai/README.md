@@ -21,6 +21,10 @@ npm run validate
 
 이번 편집에서 CLI를 실제 재실행해 schemaValid=true, verdict=PASS를 확인했습니다. [7개 조건의 회귀 검사](../../scripts/check-evidence.mjs)와 [실제 출력](../../evidence/personal-ai/local-regression.json)도 제공합니다. 합성 입력 검사이며 외부 provider에는 접속하지 않았습니다.
 
+## 실제 PowerShell 코드 발췌
+
+[원본 함수 5개와 재현 테스트](examples/README.md)에는 Codex 작업 지시 파싱, 허용된 저장소 검사, 외부 프로세스 종료 코드 판정이 담겨 있습니다. Private Runner 소스에서 부작용 없는 부분만 공개한 것이며 스케줄러나 외부 쓰기 기능은 복사하지 않았습니다.
+
 ## 범위
 정확한 필드 집합·assertion 순서·가상 fixture 기준값·부작용 지표를 검사합니다. 공개 버전에서는 실제 provider 근거가 없는 `LIVED_SANITIZED` 입력을 거부해 합성 결과를 실사용 성공으로 승격하지 않습니다. PASS 보고서를 그대로 믿는 대신 계산한 판정과 보고 outcome의 일치를 요구합니다.
 

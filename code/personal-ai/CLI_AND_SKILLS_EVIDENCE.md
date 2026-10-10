@@ -46,3 +46,10 @@ function Get-RepoPath {
 또한 `research/agent_skills_canary_20260919/STATUS.md`를 별도 연결로 재확인했으며, Codex·Antigravity의 4개 control/treatment 결과와 실제 브랜치·결과 파일 범위가 일치합니다. `skills/automation-factory-execution/SKILL.md`에는 `GOAL`, `SCOPE`, `AUTHORITATIVE INPUTS`, `DO NOT TOUCH`, `DONE STATE`, `VERIFICATION`, `APPROVAL BOUNDARY`의 작업 계약이 정의되어 있습니다. **스킬 문서 작성과 도구 호출·provider 성공 여부는 서로 다른 증거**입니다.
 
 Codex 자체의 sandbox에서는 위 비공개 GitHub 원문 직접 조회가 404였으나, 같은 사용자 계정의 인증된 GitHub 연결에서 네 파일의 내용을 별도로 확인했습니다. 권한 경계가 다른 도구에서 접근 결과가 달라진 사례입니다. 원본의 전체 코드·개인 Issue/PR 링크·토큰은 이 Public 저장소에 복사하지 않았습니다.
+
+
+## 추가 공개한 원본 함수 발췌
+
+[PowerShell 원본 함수와 재현 검사](examples/README.md)는 개인 Private Runner `scripts/pai-codex-runner.ps1`의 source blob `565f30912ac777976649c852839d2e9aa48cc155`에서 함수 5개만 추출했습니다. Task Envelope 파싱·허용 저장소 선택·외부 명령의 정상 종료만 다루며, 계정 설정·실제 Issue 처리·스케줄러·비공개 PR 쓰기는 공개하지 않았습니다.
+
+함수는 당시 구현의 동작을 보존한 발췌입니다. 테스트는 이번 포트폴리오 정리에서 새로 추가한 코드이며, **2026-10-10 Windows PowerShell 8개 검사 PASS, 외부 Provider 호출 0**을 기록했습니다. 부분 함수 검증을 시스템 전체 성공으로 확대하지 않습니다.

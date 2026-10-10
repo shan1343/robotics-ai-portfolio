@@ -18,6 +18,20 @@ AI 작업자는 그럴듯한 코드와 완료 보고를 빠르게 낼 수 있습
 
 도구별 역할도 구분했습니다. **Codex CLI**는 저장소 안에서 범위를 정한 실행·수정에, **스크립트**는 동일 입력을 다시 검사하는 데 사용했습니다. **Skill**은 반복될 절차의 발견·전달 형식이고, **플러그인**은 기능을 노출하는 설치 단위이며, **MCP**는 외부 도구·원본 서비스에 닿는 통로입니다. 어느 하나가 설정에 보인다고 나머지의 인증·작동·성과까지 입증되지는 않습니다. 원본 서비스에 쓰는 작업은 실행 영수증뿐 아니라 해당 서비스에서 읽어 온 결과가 필요합니다. Claude Code CLI는 설치·인증 확인 단계로만 표시합니다. 출처: `AGENTS.md`, `.codex/config.toml` 보존본 및 사용자 제공 2026-10-10 환경 확인.
 
+## 실제 코드: Issue 작업 지시와 저장소 접근 범위를 해석하기
+
+승인한 GitHub Issue를 Codex 작업으로 전달하려는 로컬 Runner를 만들면서, 중요한 것은 `프롬프트 전달`보다 **다른 저장소나 외부 작업까지 허용하지 않는 범위 검사**였습니다.
+
+비공개 구현 파일에서 부작용이 없는 함수 다섯 개를 실제 코드로 공개했습니다. [PowerShell 소스](../code/personal-ai/examples/verified-cli-helpers.ps1)는 작업 지시의 `TASK`, `DONE_WHEN`, `TARGET_REPO`를 읽는 파서, 허용한 저장소만 로컬 경로로 매핑하는 함수, Windows PowerShell에서 외부 명령의 종료 코드를 검증하는 함수입니다.
+
+[8개 로컬 테스트](../code/personal-ai/examples/test-verified-cli-helpers.ps1)는 허용되지 않은 저장소를 거부하는지, 예제 Task를 정확하게 구분하는지, 외부 명령의 종료 코드를 검사하는지 확인합니다. 원본 API 호출·GitHub 쓰기·계정 변경 없이 재현할 수 있습니다.
+
+~~~powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\code\personal-ai\examples	est-verified-cli-helpers.ps1
+~~~
+
+이 코드는 2026년 당시 Runner의 **일부**로, 무인 운영 시스템 전체를 공개·검증한 것은 아닙니다. 원본에는 AI 코딩 지원이 포함됐고, 저는 작업 범위와 수용 기준을 정하고 통합·사용 평가를 했습니다.
+
 ## Skill을 채택하기 전에 한 대조 실험
 
 작업을 `SKILL.md`로 포장하면 재사용이 편해질 수 있지만, 발견 가능성과 실행 성과는 다릅니다. 2026-09-19 Agent Skills canary는 **같은 5개 폐기 가능한 fixture**를 기준으로, 명시적 Markdown 절차를 주는 control과 Skill을 사용하는 treatment를 비교했습니다. 판정 항목은 최신 원본 우선, 필수 근거가 없을 때 `BLOCKED`, 거짓 `DONE` 0, 보호 파일 수정 0이었습니다. 사용자가 제시한 Codex·Antigravity **4개 통제 실행 PASS**는 이 제한된 oracle에 대한 결과입니다. 보존된 2026-09-20 요약본 `portable-skills-and-triggers.md`는 Jules를 포함한 5개 arm을 함께 서술하지만, Jules arm의 독립 상태 원문은 이번 공개 편집에서 확인하지 못했으므로 같은 확정치로 합산하지 않았습니다. 실행 속도 개선도 측정되지 않았습니다.

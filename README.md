@@ -19,6 +19,7 @@
 ### AI 코딩 도구를 쓰는 개발
 
 [Codex CLI·Skill·검증 사례](projects/agentic-development.md)에서 목표와 수정 범위 정의, 격리 실행, 원본 재조회, Skill 대조 실험과 복잡한 자동화 보류 판단을 설명합니다. [파일별 근거와 공개 코드](code/personal-ai/CLI_AND_SKILLS_EVIDENCE.md)는 확인된 결과와 미검증 상태를 구분합니다.
+[**실제 Codex Runner PowerShell 원본 함수 5개와 실행 테스트**](code/personal-ai/examples/README.md)도 확인할 수 있습니다. 기능 구현은 AI 지원 개발이며 무인 운영 성공을 주장하지 않습니다.
 
 ### G1 — 어떤 보상을 바꾸려 했는가?
 
