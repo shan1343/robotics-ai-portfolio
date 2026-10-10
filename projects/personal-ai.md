@@ -67,7 +67,7 @@ Discovery Dam은 이전 조사와 원자료를 먼저 찾고, 질문에 맞는 �
 
 **Codex Runner 원본 함수:** [PowerShell 함수 다섯 개](../code/personal-ai/examples/README.md)는 작업 지시의 `TASK`·`DONE_WHEN`을 읽고, 허용한 저장소 경로를 찾으며, 외부 명령의 종료 코드를 확인합니다. 개인 경로와 계정 쓰기 부분은 제외했습니다. Windows의 stderr 출력과 실패 후 상태 복원도 로컬 검사로 확인할 수 있습니다.
 
-**결과 보고서 판정기:** [JavaScript 모듈](../code/personal-ai/src/lived-canary-evidence.js)은 합성 입력의 필수 조건, 부작용 지표, 보고 결과가 맞는지 대조합니다. 문제를 기록한 `FAIL`과 문제를 숨긴 `PASS`를 구분하며, 외부 원본 재조회가 없는 실사용 표시 입력은 `INVALID`로 거절합니다. 공개 CLI는 Provider에 접속하지 않습니다.
+**결과 보고서 판정기:** [JavaScript 모듈](../code/personal-ai/src/lived-canary-evidence.js)은 합성 입력의 필수 조건, 부작용 지표, 보고 결과가 맞는지 대조합니다. 문제를 기록한 `FAIL`과 문제를 숨긴 `PASS`를 구분합니다. 공개 버전은 실사용을 뜻하는 `LIVED_SANITIZED` 입력을 모두 `INVALID`로 거절하며, 외부 서비스에 접속하지 않습니다.
 
 ```sh
 # 저장소 루트
