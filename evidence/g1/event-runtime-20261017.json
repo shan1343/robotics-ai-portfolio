@@ -8,9 +8,9 @@
   "human_keyboard_rehearsal": "PENDING",
   "ai_assisted_implementation": true,
   "suite": {
-    "tests": 238,
-    "passed": 238,
-    "seconds": 82.717
+    "tests": 244,
+    "passed": 244,
+    "seconds": 70.492
   },
   "full_routes": {
     "count": 15,
@@ -416,5 +416,12 @@
     "Physical body, attachments, communication, ownership and stop response require on-site checks.",
     "No newly trained gait/dance policy; pretrained assets and custom integration are distinguished."
   ],
-  "source_content_commit": "96193133a5afac526e3044dfb6977623140616a5"
+  "source_content_commit": "7985aab616d40fdcb7c85a1f25f1c4448994406f",
+  "portability": {
+    "scope": "Packaging/bootstrap and explicit unavailable historical backup; robot runtime unchanged",
+    "latest_full_suite_tests": 244,
+    "latest_full_suite_passed": 244,
+    "complete_offline_distribution": false,
+    "fresh_machine_revalidation_required": true
+  }
 }
