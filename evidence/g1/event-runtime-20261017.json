@@ -1,0 +1,420 @@
+{
+  "schema": 1,
+  "date": "2026-10-17",
+  "kind": "OFFLINE_SOFTWARE_AND_SIMULATION",
+  "status": "OFFLINE_VERIFIED_FIELD_PENDING",
+  "robot_contact_in_this_work": false,
+  "real_pass": false,
+  "human_keyboard_rehearsal": "PENDING",
+  "ai_assisted_implementation": true,
+  "suite": {
+    "tests": 238,
+    "passed": 238,
+    "seconds": 82.717
+  },
+  "full_routes": {
+    "count": 15,
+    "passed": 15,
+    "criterion": "source criterion: height >= 0.35m and gravity tilt <= 1rad; retains separate historical 0.7rad diagnostic failures",
+    "records": [
+      {
+        "route": "bow",
+        "result": "PASS",
+        "minimum_height": 0.7744852397860571,
+        "maximum_gravity_tilt": 0.16520014329576932,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "gangnam",
+        "result": "PASS",
+        "minimum_height": 0.6495026615100233,
+        "maximum_gravity_tilt": 0.29856134729600403,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "moves_fence2",
+        "result": "PASS",
+        "minimum_height": 0.6249457143899596,
+        "maximum_gravity_tilt": 0.5950045792468679,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "moves_hype",
+        "result": "PASS",
+        "minimum_height": 0.5514757677146948,
+        "maximum_gravity_tilt": 0.5683204108015082,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "moves_longdance",
+        "result": "PASS",
+        "minimum_height": 0.623757975940008,
+        "maximum_gravity_tilt": 0.47692793167873576,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "moves_modern",
+        "result": "PASS",
+        "minimum_height": 0.6084409717521971,
+        "maximum_gravity_tilt": 0.8374677266553693,
+        "strict_crossings": 63,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "moves_party",
+        "result": "PASS",
+        "minimum_height": 0.6005780731254327,
+        "maximum_gravity_tilt": 0.5204884962429455,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "moves_salsa",
+        "result": "PASS",
+        "minimum_height": 0.748683218095123,
+        "maximum_gravity_tilt": 0.21487002728461319,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "moves_shuffle",
+        "result": "PASS",
+        "minimum_height": 0.6346582465449421,
+        "maximum_gravity_tilt": 0.5774982029047417,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "moves_spiraldance",
+        "result": "PASS",
+        "minimum_height": 0.7254169569415668,
+        "maximum_gravity_tilt": 0.270806877198128,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "moves_steptouch",
+        "result": "PASS",
+        "minimum_height": 0.6149746435055222,
+        "maximum_gravity_tilt": 0.3708617854691564,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "repeated-recovery",
+        "result": "PASS",
+        "minimum_height": 0.7878524494724568,
+        "maximum_gravity_tilt": 0.027318492924313435,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "walk-translation",
+        "result": "PASS",
+        "minimum_height": 0.7770304010576747,
+        "maximum_gravity_tilt": 0.05848932412602354,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "wave",
+        "result": "PASS",
+        "minimum_height": 0.7880075299996911,
+        "maximum_gravity_tilt": 0.027318492924321564,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      },
+      {
+        "route": "walk-yaw",
+        "result": "PASS",
+        "minimum_height": 0.7416609279684715,
+        "maximum_gravity_tilt": 0.07472716122764712,
+        "strict_crossings": 0,
+        "max_nonfoot_ground_contacts": 0,
+        "max_unsupported_force": 0.0,
+        "trajectory_resets": 0
+      }
+    ]
+  },
+  "lifecycle": {
+    "count": 39,
+    "passed": 39,
+    "scenario": "early/mid/end: restart active, stop, switch to different motion",
+    "records": [
+      {
+        "route": "bow",
+        "phase": "early",
+        "result": "PASS"
+      },
+      {
+        "route": "bow",
+        "phase": "end",
+        "result": "PASS"
+      },
+      {
+        "route": "bow",
+        "phase": "mid",
+        "result": "PASS"
+      },
+      {
+        "route": "gangnam",
+        "phase": "early",
+        "result": "PASS"
+      },
+      {
+        "route": "gangnam",
+        "phase": "end",
+        "result": "PASS"
+      },
+      {
+        "route": "gangnam",
+        "phase": "mid",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_fence2",
+        "phase": "early",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_fence2",
+        "phase": "end",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_fence2",
+        "phase": "mid",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_hype",
+        "phase": "early",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_hype",
+        "phase": "end",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_hype",
+        "phase": "mid",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_longdance",
+        "phase": "early",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_longdance",
+        "phase": "end",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_longdance",
+        "phase": "mid",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_modern",
+        "phase": "early",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_modern",
+        "phase": "end",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_modern",
+        "phase": "mid",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_party",
+        "phase": "early",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_party",
+        "phase": "end",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_party",
+        "phase": "mid",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_salsa",
+        "phase": "early",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_salsa",
+        "phase": "end",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_salsa",
+        "phase": "mid",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_shuffle",
+        "phase": "early",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_shuffle",
+        "phase": "end",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_shuffle",
+        "phase": "mid",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_spiraldance",
+        "phase": "early",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_spiraldance",
+        "phase": "end",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_spiraldance",
+        "phase": "mid",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_steptouch",
+        "phase": "early",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_steptouch",
+        "phase": "end",
+        "result": "PASS"
+      },
+      {
+        "route": "moves_steptouch",
+        "phase": "mid",
+        "result": "PASS"
+      },
+      {
+        "route": "walk",
+        "phase": "early",
+        "result": "PASS"
+      },
+      {
+        "route": "walk",
+        "phase": "end",
+        "result": "PASS"
+      },
+      {
+        "route": "walk",
+        "phase": "mid",
+        "result": "PASS"
+      },
+      {
+        "route": "wave",
+        "phase": "early",
+        "result": "PASS"
+      },
+      {
+        "route": "wave",
+        "phase": "end",
+        "result": "PASS"
+      },
+      {
+        "route": "wave",
+        "phase": "mid",
+        "result": "PASS"
+      }
+    ]
+  },
+  "runtime_timing": {
+    "result": "PASS",
+    "active_seconds": 180.15139499700308,
+    "sensor_source": "declared_independent_synthetic20ms",
+    "preloaded_motion_slots": 13,
+    "retained_status_count": 8,
+    "source_age_ms": {
+      "p50": 27.62496499781264,
+      "p95": 39.22020620084368,
+      "p99": 43.05056628159946,
+      "max": 59.907317998295184
+    },
+    "inference_ms": {
+      "p50": 2.317100006621331,
+      "p95": 3.2494369988853578,
+      "p99": 3.754720501456176,
+      "max": 21.97851500386605
+    },
+    "hard_realtime": false,
+    "scope": "Actual GUI/inference/writer with independent synthetic sensors; timing only, not balance. Running path after sensor split; later preparation-only stability gate covered by lifecycle/startup tests."
+  },
+  "startups": {
+    "passed": 3,
+    "cpu_load_workers": 1,
+    "scope": "all motion slots, final preparation gate and independent sensors"
+  },
+  "protection": {
+    "frontend_stall_ms": 150,
+    "healthy_sensors": true,
+    "outcome": "operator_stale and actual recorded damping",
+    "physical_stop_verified": false
+  },
+  "preservation": {
+    "runtime_entries": 50154,
+    "external_entries": 5047,
+    "mismatches": 0
+  },
+  "private_evidence_summary_sha256": "98fe5d35807d81f28e4fdbed4eec701ee331ee2f6604613fcdaadc5cb1b7567a",
+  "limitations": [
+    "No actual robot or human acceptance.",
+    "Modern reaches approximately 0.84rad gravity tilt and crosses the historical 0.7rad diagnostic threshold; source-criterion completion is not hardware safety approval.",
+    "Original failures retained in private evidence.",
+    "Physical body, attachments, communication, ownership and stop response require on-site checks.",
+    "No newly trained gait/dance policy; pretrained assets and custom integration are distinguished."
+  ],
+  "source_content_commit": "96193133a5afac526e3044dfb6977623140616a5"
+}
