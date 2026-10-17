@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-17",
+  "scope": "Local laptop TCP/SDK/MuJoCo preparation; no robot contact",
+  "software_suite": {
+    "tests": 292,
+    "passed": 292,
+    "seconds": 145.942,
+    "stage": "after final input-priority fix"
+  },
+  "whole_sequential_motion_matrix": {
+    "motions": 13,
+    "passed": 12,
+    "failed": 1,
+    "failed_motion": "LongDance",
+    "fault": "state_stale",
+    "guard_ms": 100,
+    "source_height_min_m": 0.35,
+    "source_gravity_tilt_max_rad": 1.0,
+    "failure_within_height_tilt_bounds": true,
+    "whole_pass": false,
+    "stage": "before final input-priority fix; not relabeled as rerun"
+  },
+  "separate_longdance_diagnostics": {
+    "passed": 2,
+    "reproduced_original_fault": false,
+    "gc_cause_proven": false,
+    "replaces_whole_failure": false
+  },
+  "representative_lifecycle": {
+    "cases": 4,
+    "passed": 4,
+    "trajectory_resets": 0
+  },
+  "walk_and_bidirectional_yaw": {
+    "passed": true,
+    "trajectory_resets": 0
+  },
+  "disconnect_reconnect_recovery": {
+    "passed": true,
+    "explicit_virtual_human_reposition": true,
+    "new_connection_and_f_required": true,
+    "automatic_standup": false
+  },
+  "arm_dependency_download": {
+    "hash_verified_files": 49,
+    "native_executed": false
+  },
+  "real_time_certified": false,
+  "actual_wifi_tested": false,
+  "robot_contacted": false,
+  "real_pass": false,
+  "human_acceptance": "PENDING",
+  "limitations": [
+    "Intermittent continuous host timing fault remains unproven",
+    "Offline current-source SDK barrier runs slower than source motion",
+    "ARM install/model timing/thermal, actual Wi-Fi/internal DDS, hardware configuration and physical stop/recovery remain onsite checks"
+  ],
+  "public_scope": "Curated aggregate only; no private source, policy weights, raw logs, credentials or device addresses",
+  "final_input_priority_fix": {
+    "focused_tests": 17,
+    "passed": 17,
+    "seconds": 26.827,
+    "includes_actual_tcp_controller_and_sim_lifecycle": true,
+    "independent_review_approved": true
+  }
+}
